@@ -42,7 +42,7 @@ export default function Review({ game_id }) {
                                 <div className="p-4 rounded-4 c-reviews">
                                     <div className="d-flex align-items-center">
                                         <img
-                                            src={review.profiles.avatar_url || '/public/profile-default.png'}
+                                            src={review.profiles.avatar_url || '/profile-default.png'}
                                             alt="Avatar"
                                             className="rounded rounded-pill avatar image"
                                             style={{ height: 70, width: 70 }}
