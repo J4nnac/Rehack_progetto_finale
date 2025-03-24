@@ -3,7 +3,7 @@
 Rehacktor è un applicazione web sviluppata con React che permette agli utenti di navigare, cercare e interagire con una vasta collezione di giochi. L'applicazione permette di autenticarsi, visualizzare nel dettaglio i giochi, chattare in tempo reale, scrivere recensioni e la possibilità di salvare i giochi preferiti per gli utenti autenticati.
 
 ## API
-Il progetto utilizza l'API di RAWG per ottenere dati sui giochi e Supabase come BaaS per autenticazione, archiviazione del database e chat in tempo reale.
+Il progetto utilizza l'API di RAWG.io(https://rawg.io/) per ottenere dati sui giochi e Supabase come BaaS per autenticazione, archiviazione del database e chat in tempo reale.
 
 ## Stile
 L'applicazione è realizzata con elementi di css per lo stile
@@ -60,4 +60,5 @@ Lista delle dipendenze usate nel progetto:
 4. Cartella utils per gestione dei formati delle date
 5. Cartella hooks per la gestione degli hooks
 6. Cartella layout per il contenuto ripetuto nelle pagine
-Link del progetto
+## Link del progetto
+https://rehack-progetto-finalefrancecsoiannaccone.vercel.app/
