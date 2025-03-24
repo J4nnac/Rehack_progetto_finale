@@ -16,8 +16,6 @@ import FavContextProvider from "./context/FavContextProvider";
 import { ProtectedRoute } from "./components/ProtectedRoute";
 
 
-// ProtectedRoute: Controlla se l'utente è autenticato
-
 
 function App() {
   return (
@@ -43,11 +41,9 @@ function App() {
 function Root() {
   return (
     <SessionContextProvider>
-
       <FavContextProvider>
       <App />
       </FavContextProvider>
-
     </SessionContextProvider>
   );
 }

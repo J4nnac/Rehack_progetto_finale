@@ -53,7 +53,7 @@ export default function Account() {
                 <div className="col-12 d-flex flex-column align-items-center justify-content-center">
                     <div>
                         <img
-                            src={avatar_url || '/public/profile-default.png'}
+                            src={avatar_url || '/profile-default.png'}
                             alt="Avatar"
                             className="rounded rounded-pill avatar image"
                             style={{ height: 200, width: 200 }}

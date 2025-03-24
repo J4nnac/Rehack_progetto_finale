@@ -97,7 +97,7 @@ export default function ProfileAccount() {
                 {/* Avatar */}
                 <div className="col-12 d-flex form-group align-items-center justify-content-center avatar-section">
                     <img
-                        src={avatar_url || '/public/profile-default.png'}
+                        src={avatar_url || '/profile-default.png'}
                         alt="Avatar"
                         className="rounded rounded-pill me-2"
                         style={{ height: 70, width: 70 }}

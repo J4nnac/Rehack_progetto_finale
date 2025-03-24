@@ -87,7 +87,7 @@ export default function Reviews({ user }) {
                             <div className="col-12 col-md-2 d-flex align-items-center">
                                 <div className="d-flex align-items-center">
                                     <img
-                                        src={avatar_url || '/public/profile-default.png'}
+                                        src={avatar_url || '/profile-default.png'}
                                         alt="Avatar"
                                         className="rounded rounded-pill avatar image"
                                         style={{ height: 70, width: 70 }}
