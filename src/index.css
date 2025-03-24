@@ -1,0 +1,804 @@
+:root {
+    --nero: #000000;
+    --grigio-scuro-1: #242424;
+    --grigio-scuro-2: #373737;
+    --grigio-scuro-3: #494949;
+    --grigio: #5B5B5B;
+    --orange: #FF630F;
+    --bianco: #F1F1F1;
+    --textacc: #808080;
+    /* background: -webkit-linear-gradient(right, #fd945c, #FF630F); */
+}
+
+* {
+    font-family: "Figtree", serif;
+}
+
+body {
+    background-color: var(--grigio-scuro-1);
+    color: var(--bianco);
+    overflow-x: hidden;
+}
+
+.btn-link:hover{
+color: var(--orange);
+}
+.layout-margin {
+    margin-top: 60px;
+}
+
+.c-account {
+    margin-top: 90px;
+}
+.text-acc{
+    color: var(--textacc);
+}
+.text-main{
+    color: var(--bianco);
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||| NAVBAR |||||||||||||||||||||||||||||||||||||||||| */
+.nav-link {
+    color: var(--bianco);
+}
+
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-sticky {
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+.navbar .nav-link.dropdown-toggle {
+    color: var(--bianco) !important;
+}
+
+.bi-list {
+    color: var(--bianco);
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+}
+
+.form {
+    position: relative;
+}
+
+.csearch {
+    width: 100%;
+}
+
+.form .bi-search {
+
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    color: var(--grigio-scuro-3);
+
+}
+
+.form span {
+
+    position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan {
+    padding-left: 7px;
+}
+
+.left-pan i {
+
+    padding-left: 10px;
+}
+
+.form-input:focus {
+
+    box-shadow: none;
+    border: none;
+}
+
+.homeTitle {
+    font-size: 4rem;
+}
+
+.dropdown-toggle::after {
+    display: none;
+
+}
+
+.avatar-option {
+    width: 200px;
+    height: 200px;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| NAVBAR |||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| SEARCHBAR |||||||||||||||||||||||||||||||||||||||||| */
+/* Wrapper che contiene sia la sidebar che la searchbar */
+.wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 8px;
+    border-radius: 30px;
+    background-color: var(--grigio)
+}
+
+/* Sidebar */
+.sidebar {
+    z-index: 10;
+    width: 300px
+}
+
+/* Searchbar */
+.search-wrapper {
+    width: 60px;
+    /* Larghezza iniziale della searchbar */
+    height: 60px;
+    display: flex;
+    border-radius: 4rem;
+    align-items: center;
+    justify-content: end;
+    outline: none;
+    position: absolute;
+    left: 100%;
+    transform: translateX(-100%);
+    transition: width 0.4s ease-in-out, transform 0.4s ease-in-out;
+    z-index: 20;
+    overflow: hidden;
+}
+
+/* Input all'interno della searchbar */
+.search-wrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    transition: transform 0.4s ease-in-out;
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    color: var(--bianco);
+}
+
+/* Pulsante di ricerca */
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: var(--bianco);
+    border-radius: 4rem;
+    border: 1px solid var(--orange);
+    width: 60px;
+    cursor: pointer;
+    height: 60px;
+    background: var(--orange);
+    z-index: 1;
+    /* Posiziona il pulsante a destra della sidebar (distanza di 300px) */
+    transition: left 0.4s ease-in-out;
+}
+
+/* Quando la searchbar è attiva, espandiamo la sua larghezza e spostiamo l'input */
+.search-wrapper.active {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    /* Imposta una larghezza definita invece di usare 100% */
+    padding-left: 15px;
+    transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+    left: 100%;
+    /* Posiziona la searchbar al centro quando attiva */
+    transform: translateX(-100%);
+    /* Centra la searchbar senza causare uno scatto */
+}
+
+/* Quando la searchbar è attiva, spostiamo anche il pulsante all'interno della searchbar */
+.search-wrapper.active .search-btn {
+    left: auto;
+    /* Sposta il pulsante nella parte destra della searchbar */
+}
+
+.search-wrapper.active input::placeholder {
+    color: var(--bianco)
+}
+
+.search-wrapper input::placeholder {
+    color: var(--bianco)
+}
+
+/* La sidebar deve rimanere visibile sotto la searchbar */
+.search-wrapper.active .sidebar {
+    z-index: 10;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| SEARCHBAR |||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| CARD |||||||||||||||||||||||||||||||||||||||||| */
+.card {
+    width: calc(25% - 20px);
+    background-color: var(--grigio-scuro-2);
+}
+
+
+.card:hover {
+    transform: scale(1.02);
+    z-index: 10;
+    transition: transform 0.3s ease;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+}
+
+
+.game-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+.card-body {
+    height: 120px;
+    padding: 1rem;
+}
+
+
+.card .card-extra-content {
+    display: none;
+    position: absolute;
+    top: 318px;
+    left: 0px;
+    right: 0px;
+    bottom: auto;
+    background-color: var(--grigio-scuro-2);
+    color: white;
+    overflow: hidden;
+}
+
+
+.card:hover .card-extra-content {
+    display: block;
+
+}
+
+
+.bgc-grey {
+    background-color: var(--grigio);
+}
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| CARD |||||||||||||||||||||||||||||||||||||||||| */
+
+.test {
+    background-color: #24242473;
+}
+
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| SIDEBAR |||||||||||||||||||||||||||||||||||||||||| */
+
+.sidebarTitle {
+    color: var(--orange);
+}
+
+.sidebar-header {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.category-list li {
+    margin: 15px 0;
+}
+
+.category-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+
+.category-list li a:hover {
+    color: var(--orange);
+}
+
+.buttonSide {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    color: var(--bianco);
+    border: none;
+}
+
+.dropdown-menu {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none;
+    background-color: var(--grigio-scuro-1) !important;
+    color: var(--bianco) !important;
+    max-height: 400px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bianco) var(--grigio);
+}
+
+.dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: var(--grigio);
+    border-radius: 4px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: var(--bianco);
+    border-radius: 4px;
+}
+
+
+
+.dropdown-item,
+.c-dropdown-item,
+.c-dropdown-link {
+    color: var(--bianco);
+}
+
+.c-dropdown-item:hover,
+.c-dropdown-link:hover {
+    color: var(--grigio-scuro-1) !important;
+    background-color: var(--bianco) !important;
+}
+
+
+.btnDropdown {
+    margin: 10px;
+    background-color: var(--grigio);
+    color: var(--bianco);
+}
+
+.btnDropdown:hover {
+    background-color: var(--grigio);
+    color: var(--bianco);
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| SIDEBAR |||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| FORM |||||||||||||||||||||||||||||||||||||||||| */
+
+label {
+    font-family: "Raleway", sans-serif;
+    font-size: 11pt;
+}
+
+#forgot-pass {
+    color: var(--orange);
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 3px;
+    text-align: right;
+}
+
+#card {
+    background: var(--grigio-scuro-3);
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 410px;
+    margin: 6rem auto 8.1rem auto;
+    width: 329px;
+}
+
+#card-content {
+    padding: 12px 44px;
+}
+
+#card-title {
+    font-family: "Raleway Thin", sans-serif;
+    letter-spacing: 4px;
+    padding-bottom: 23px;
+    padding-top: 13px;
+    text-align: center;
+}
+
+#signup {
+    color: var(--orange);
+    font-family: "Raleway", sans-serif;
+    font-size: 10pt;
+    margin-top: 16px;
+    text-align: center;
+}
+
+#submit-btn {
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    border: none;
+    border-radius: 21px;
+    box-shadow: 0px 1px 8px var(--orange);
+    cursor: pointer;
+    color: var(--bianco);
+    font-family: "Raleway SemiBold", sans-serif;
+    height: 42.3px;
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: 0.25s;
+    width: 153px;
+}
+
+#submit-btn:hover {
+    box-shadow: 0px 1px 18px var(--orange);
+}
+
+.form {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-border {
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    height: 1px;
+    width: 100%;
+}
+
+.form-content {
+    background: var(--grigio-scuro-2);
+    border: none;
+    outline: none;
+    color: var(--bianco);
+}
+
+.underline-title {
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    height: 2px;
+    margin: -1.1rem auto 0 auto;
+    width: 90px;
+}
+
+.p-toast {
+    width: 80%;
+    z-index: 9999 !important;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| FORM |||||||||||||||||||||||||||||||||||||||||| */
+
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| ICONE |||||||||||||||||||||||||||||||||||||||||| */
+.bi-suit-heart {
+    color: var(--bianco);
+}
+
+.bi-suit-heart-fill {
+    color: var(--orange);
+}
+
+.btn-bg {
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.bi-send-fill {
+    color: var(--orange);
+}
+
+hr {
+    color: var(--orange);
+}
+
+.bi-person-gear {
+    color: var(--orange);
+}
+
+.bi-person-lines-fill {
+    color: var(--orange);
+}
+.bi-controller{
+    font-size: 50px;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| ICONE|||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| DETTAGLIO GIOCO |||||||||||||||||||||||||||||||||||||||||| */
+
+.bg-dettagli{
+    background-color: #373737be;;
+}
+
+
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| DETTAGLIO GIOCO|||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| CHAT |||||||||||||||||||||||||||||||||||||||||| */
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 200px;
+    box-sizing: border-box;
+    background-color: #49494970;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text-area {
+    width: 100%;
+    color: var(--bianco);
+    resize: none;
+    min-height: auto;
+    max-height: 8vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: #49494970;
+    border-top: 1px solid var(--orange);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.text-area:focus {
+    outline: none;
+    border-top: 1px solid var(--orange);
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.text-box {
+    display: flex;
+    align-items: end;
+}
+.time-text{
+font-size: x-small;
+}
+.message-content {
+    margin: 0;
+    word-wrap: break-word;
+    width: 80%;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| CHAT |||||||||||||||||||||||||||||||||||||||||| */
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| TABS |||||||||||||||||||||||||||||||||||||||||| */
+.p-tabview-nav-link {
+    text-decoration: none;
+    color: var(--bianco);
+    background-color: transparent;
+    border: solid 2px transparent;
+    padding: 16px;
+}
+
+.p-tabview-nav-link:hover {
+    border-bottom: solid 2px var(--orange);
+}
+
+.p-tabview-selected {
+    border-bottom: solid 2px var(--orange);
+}
+
+.p-tabview,
+.p-tabview-nav {
+    border: none;
+    background-color: var(--grigio-scuro-1);
+    padding: 0;
+}
+
+.p-tabview-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.p-tabview-panels {
+    color: var(--bianco);
+    background-color: var(--grigio-scuro-1);
+    padding: 0;
+}
+
+.fav-text-card {
+    text-decoration: none;
+    color: var(--bianco);
+}
+
+.bg-profilo{
+    background-color: var(--grigio-scuro-2);
+    padding: 20px;
+    border-radius: 20px;
+}
+.custom-input:focus{
+    color: var(--bianco);
+    outline: none;
+    box-shadow: none;
+    border-color: var(--orange);
+}
+.btn-custom{
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    color: var(--bianco);
+}
+/* |||||||||||||||||||||||||||||||||||||||||||||| TABS |||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| REVIEWS |||||||||||||||||||||||||||||||||||||||||| */
+.text-area-review {
+    resize: none;
+    height: 100px;
+    min-height: auto;
+    box-sizing: border-box;
+    background-color: var(--grigio-scuro-2);
+    color: var(--bianco);
+    border: none;
+}
+
+.text-area-review:focus {
+    outline: none;
+    border: none;
+}
+
+
+.btn-rev {
+    background: -webkit-linear-gradient(right, #fd945c, #FF630F);
+    padding: 15px;
+    border: none;
+    width: 50%;
+
+}
+
+.c-reviews {
+    background-color: var(--grigio-scuro-2);
+
+}
+
+.card-review {
+    border-left: solid 3px var(--orange);
+    padding-left: 12px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Sfondo scuro per evidenziare la modale */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Assicurati che la modale sia sopra il contenuto */
+}
+
+.modal-content {
+    background-color: var(--grigio-scuro-1);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--orange);
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.close-modal-btn:hover {
+    text-decoration: underline;
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| REVIEWS |||||||||||||||||||||||||||||||||||||||||| */
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| SCREENSHOT |||||||||||||||||||||||||||||||||||||||||| */
+.modal-overlay-screenshot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content-screenshot {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: hidden;
+}
+
+.img-modal-screenshot {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| SCREENSHOT |||||||||||||||||||||||||||||||||||||||||| */
+
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| MEDIA |||||||||||||||||||||||||||||||||||||||||| */
+@media (max-width: 1200px) {
+    .card {
+        width: calc(50% - 20px);
+
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+
+
+    }
+
+    .sidebar {
+        width: 200px;
+        padding-left: 15px;
+    }
+
+    .card-review {
+        border-top: solid 3px var(--orange);
+        padding-top: 12px;
+        margin-top: 8px;
+        border-left: none;
+        padding-left: 0px
+    }
+
+    .wrapper {
+        background-color: transparent;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+
+    }
+
+}
+
+/* |||||||||||||||||||||||||||||||||||||||||||||| MEDIA |||||||||||||||||||||||||||||||||||||||||| */
