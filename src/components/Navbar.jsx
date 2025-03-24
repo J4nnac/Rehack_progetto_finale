@@ -82,7 +82,7 @@ export default function Navbar() {
                         ) : (
                             <div>
                                 <img
-                                    src='/public/profile-default.png'
+                                    src='/profile-default.png'
                                     alt="Avatar"
                                     className="rounded rounded-pill avatar image"
                                     style={{ height: 70, width: 70 }}
